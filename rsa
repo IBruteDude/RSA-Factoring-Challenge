@@ -28,7 +28,6 @@ if __name__ == '__main__':
         raise RuntimeError("Usage: ./factors")
     lines = open(argv[1]).readlines()
     for line in lines:
-        print(line)
         num = int(line)
         f1, f2 = fermat_factorisation(num)
         print("{}={}*{}".format(num, f1, f2))
