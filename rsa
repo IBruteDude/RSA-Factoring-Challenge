@@ -16,11 +16,6 @@ def exhaustive_factorisation(N):
 def fermat_factorisation(N):
     if N % 2 == 0:
         return  (N // 2, 2)
-    try:
-        a, b = exhaustive_factorisation(N)
-        return (a, b)
-    except TimeoutError:
-        pass
     a = ceil(sqrt(N))
     b2 =  a*a - N
     while int(sqrt(b2)) != sqrt(b2):
