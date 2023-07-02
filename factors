@@ -9,7 +9,7 @@ def exhaustive_factorisation(N):
     n = 3
     while N % n != 0:
         n += 2
-        if n > 10000000:
+        if n > 1000000:
             raise TimeoutError
     return (N // n, n)
 

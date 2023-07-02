@@ -9,13 +9,13 @@ def exhaustive_factorisation(N):
     n = 3
     while N % n != 0:
         n += 2
-        if n > 10000000:
+        if n > 1000000:
             raise TimeoutError
     return (N // n, n)
 
 def fermat_factorisation(N):
     if N % 2 == 0:
-        return (2, N // 2)
+        return  (N // 2, 2)
     try:
         a, b = exhaustive_factorisation(N)
         return (a, b)
